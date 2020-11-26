@@ -1,6 +1,9 @@
 // require module
 const mongoose = require('mongoose');
 
+// shortcut variable
+const db = mongoose.connection
+
 // setup settings
 
 mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/diet-tracker', {
@@ -9,8 +12,7 @@ mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/diet-tracker',
     useUnifiedTopology: true,
 });
 
-// shortcut variable
-const db = mongoose.connection
+
 
 // database connection event
 db.on('connected', function() {

@@ -24,7 +24,10 @@ const daysSchema = new Schema({
 // define Diet Schema
 const dietSchema = new Schema({
     name: String,
-    description: String,
+    dietType: {
+        type: String,
+        enum: ['Fasting', 'Bulking', 'Vegan', 'Low-Carb', 'Vegetarian']
+    },
     days: [daysSchema],
     startDate: function () {
         const date = new Date();

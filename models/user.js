@@ -7,6 +7,9 @@ const Schema = mongoose.Schema;
 // define User Schema
 
 const userSchema = new Schema({
+    displayName: {
+        type: String,
+    },
     googleId: {
         type: String,
     },

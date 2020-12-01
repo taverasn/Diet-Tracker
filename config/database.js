@@ -1,24 +1,14 @@
-// require module
 const mongoose = require('mongoose');
+const db = mongoose.connection;
 
-// shortcut variable
-const db = mongoose.connection
 
-// setup settings
 
-mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/diet-tracker', {
-    useNewUrlParser: true,
+mongoose.connect(process.env.DATABASE_URI || 'mongodb://localhost/diet-tracker', {
     useCreateIndex: true,
-    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
-
-
-// database connection event
 db.on('connected', function() {
-    console.log(`Mongoose connected to: ${db.host}:${db.port}`);
-});
-
-db.on('error', function(error) {
-    console.log(`Encountered an error: ${error.message}`);
+    console.log(`Connected to MongoDB on ${db.host}:${db.port}`);
 });

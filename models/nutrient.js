@@ -7,7 +7,14 @@ const Schema = mongoose.Schema;
 // define Nutrient Schema
 const nutrientSchema = new Schema({
     name: String,
-    description: String,
+    intake: {
+        type: String,
+        enum: ['Low', 'Medium', 'High']
+    },
+    diet: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: 'User',

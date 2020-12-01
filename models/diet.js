@@ -4,15 +4,20 @@ const mongoose = require('mongoose');
 // shortcut variable
 const Schema = mongoose.Schema;
 
-// define Days Schema
-const daysSchema = new Schema({
-    sunday: String,
-    monday: String,
-    tuesday: String,
-    wednesday: String,
-    thursday: String,
-    friday: String,
-    saturday: String,
+// define meals Schema
+const mealsSchema = new Schema({
+    meals: {
+        type: String,
+    },
+    date: {
+        type: Date,
+        default: function () {
+            const date = new Date();
+            const nextYear = date.getFullYear() + 1
+            date.setFullYear(nextYear);
+            return date;
+        }
+    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -28,12 +33,15 @@ const dietSchema = new Schema({
         type: String,
         enum: ['Fasting', 'Bulking', 'Vegan', 'Low-Carb', 'Vegetarian']
     },
-    days: [daysSchema],
-    startDate: function () {
-        const date = new Date();
-        const nextYear = date.getFullYear() + 1
-        date.setFullYear(nextYear);
-        return date;
+    meals: [mealsSchema],
+    startDate: {
+        type: Date,
+        default: function () {
+            const date = new Date();
+            const nextYear = date.getFullYear() + 1
+            date.setFullYear(nextYear);
+            return date;
+        }
     },
     createdBy: {
         type: Schema.Types.ObjectId,

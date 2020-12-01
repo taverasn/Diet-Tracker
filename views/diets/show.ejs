@@ -9,34 +9,25 @@
             <h5><%= diet.name %> | Diet Type <%= diet.dietType %> | Start Date:
                 <%= diet.startDate.toLocaleDateString() %></h5>
         </div>
-        <form class="container" action="/diets/<%= diet._id %>/meals" method="post">
-            <p>Log a new Day for your diet</p>
-            <div class="input-field">
-                <input type="text" name="meals">
-                <label>Enter Your Meals for the Day</label>
-            </div>
-            <div class="input-field">
-                <input class="datepicker" type="text" name="date">
-                <label>Day of Meals</label>
-            </div>
-            <input class="btn btn-small" type="submit" value="Add Meals">
-        </form>
         <div class="container">
-
-            <% if(diet.meals.length) { %>
+            <% if(meals.length) { %>
             <h6>Meal Log</h6>
-            <table class="striped">
+            <% diet.meals.forEach(function(meal) { %>
+            <table class="container">
                 <thead>
                     <tr>
-                        <th>Meals</th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Dinner</th>
                         <th>Date</th>
                         <th>Added by</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% diet.meals.forEach(function(meal) { %>
                     <tr>
-                        <td><%= meal.meals %></td>
+                        <td><%= meal.breakfast %></td>
+                        <td><%= meal.lunch %></td>
+                        <td><%= meal.dinner %></td>
                         <td><%= meal.date.toLocaleDateString() %></td>
                         <td><%= meal.createdBy.displayName %></td>
                     </tr>
@@ -46,6 +37,7 @@
             <% } else { %>
             <h6>No Meals Have Been Added for this Diet</h6>
             <% } %>
+            <a class="btn btn-small" href="/diets/<%= diet._id %>/meals/new">Add Your Meals For The Day</a>
         </div>
         <div class="container">
 

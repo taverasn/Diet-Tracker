@@ -4,16 +4,12 @@ const mongoose = require('mongoose');
 // shortcut variable
 const Schema = mongoose.Schema;
 
-
-
-// define Diet Schema
-const dietSchema = new Schema({
-    name: String,
-    dietType: {
-        type: String,
-        enum: ['Fasting', 'Bulking', 'Vegan', 'Low-Carb', 'Vegetarian']
-    },
-    startDate: {
+// define meals Schema
+const mealsSchema = new Schema({
+    breakfast: String,
+    lunch: String,
+    dinner: String,
+    date: {
         type: Date,
         default: function () {
             const date = new Date();
@@ -24,12 +20,11 @@ const dietSchema = new Schema({
     },
     createdBy: {
         type: Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'User'
     }
-}, { 
-    timestamps: true 
-});
-
+}, {
+    timestamps: true
+})
 
 // export schema
-module.exports = mongoose.model('Diet', dietSchema); 
+module.exports = mongoose.model('Meal', mealsSchema); 

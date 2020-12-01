@@ -8,8 +8,6 @@
 
 ### HomePage
 
-<img src="public/images/github-small.png" width="100">
-
 ![](public/images/DietTrackerHomePage.png)
 
 ### Diets Page

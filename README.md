@@ -6,17 +6,17 @@
 
 ## Screenshots
 
-### HomePage
+- HomePage
 
-<img src="public/images/DietTrackerHomePage.png" width="300">
+<img src="public/images/DietTrackerHomePage.png" width="600">
 
-### Diets Page
+- Diets Page
 
-<img src="public/images/AllDietsPage.png" width="300">
+<img src="public/images/AllDietsPage.png" width="600">
 
-### Specific Diet Page
+- Specific Diet Page
 
-<img src="public/images/SpecificDietPage.png" width="300">
+<img src="public/images/SpecificDietPage.png" width="600">
 
 ## Technologies
 - HTML5

@@ -8,15 +8,15 @@
 
 ### HomePage
 
-![](public/images/DietTrackerHomePage.png)
+<img src="public/images/DietTrackerHomePage.png" width="300">
 
 ### Diets Page
 
-![](public/images/AllDietsPage.png)
+<img src="public/images/AllDietsPage.png" width="300">
 
 ### Specific Diet Page
 
-![](public/images/SpecificDietPage.png)
+<img src="public/images/SpecificDietPage.png" width="300">
 
 ## Technologies
 - HTML5

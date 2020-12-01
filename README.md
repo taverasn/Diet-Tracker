@@ -8,7 +8,7 @@
 
 ### HomePage
 
-![](public/images/DietTrackerHomkePage.png)
+![](public/images/DietTrackerHomePage.png)
 
 
 ## Technologies

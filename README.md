@@ -7,11 +7,17 @@
 ## Screenshots
 
 ### HomePage
+
 <img src="public/images/github-small.png" width="100">
+
 ![](public/images/DietTrackerHomePage.png)
+
 ### Diets Page
+
 ![](public/images/AllDietsPage.png)
+
 ### Specific Diet Page
+
 ![](public/images/SpecificDietPage.png)
 
 ## Technologies

@@ -6,6 +6,9 @@
 
 ## Screenshots
 
+### HomePage
+
+![](public/images/DietTrackerHomkePage.png)
 
 
 ## Technologies

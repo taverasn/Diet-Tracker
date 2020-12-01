@@ -11,8 +11,8 @@
 <img src="public/images/github-small.png" width="100">
 
 ![](public/images/DietTrackerHomePage.png)
-![](public/images/AllDiets.png)
-![](public/images/SpecificDiet.png)
+![](public/images/DietsPage.png)
+![](public/images/SpecificDietsPage.png)
 
 ## Technologies
 - HTML5

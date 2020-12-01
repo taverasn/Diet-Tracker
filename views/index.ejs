@@ -1,38 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-    <!-- Materialize Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize CSS Framework -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/style.css" />
-    <!-- JavaScript for Materialize -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title><%= title %></title>
-</head>
-
+<%- include('./partials/head') %>
 <body>
-    <nav>
-        <a href="/diets" <%- title === 'Diets' ? 'class="active"' : '' %>>Diets</a>
-        <a href="/nutrients" <%- title === 'Nutrients' ? 'class="active"' : '' %>>Nutrients</a>
-        <a href="/user" <%- title === 'User' ? 'class="active"' : '' %>>User</a>
-    </nav>
-    <li>
-        <% if(user) { %>
-        <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
-        <% } else { %>
-        <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
-        <% } %>
-    </li>
+    <%- include('./partials/header') %>
     <main>
-        <h1><%= title %></h1>
-    </main>
-</body>
+        <h1>Welcome to Diet Tracker</h1>
 
+    </main>
+    <%- include('./partials/footer') %>
+</body>
 </html>

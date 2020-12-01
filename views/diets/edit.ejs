@@ -4,9 +4,9 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <form action="/diets" method="post">
+        <form action="/diets/<%= dietId %>?_method=PUT" method="POST">
             <div>
-                <input type="text" name="name">
+                <input type="text" name="name" value="<%= diet.name %>">
                 <label>Diet Name</label>
             </div>
             <div>
@@ -21,9 +21,9 @@
             </div>
             <div>
                 <input class="datepicker" type="text" name="startDate">
-                <label>Pick the Day you will Start</label>
+                <label>Set Start Date</label>
             </div>
-            <input type="submit" value="Add Diet">
+            <input type="submit" value="Edit Diet">
         </form>
     </main>
     <%- include('../partials/footer') %>

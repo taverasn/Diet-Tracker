@@ -46,5 +46,5 @@
 - Clean up the entire UI to be more visually appealing.
 - Have the all Diets page appear as images with names instead of a list.
 - Add Styling to be friendly to mobile devices.
-- Add Edit and Delete to meals and nutrients
+- Add UI for Workouts
 

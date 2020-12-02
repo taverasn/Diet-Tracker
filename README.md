@@ -47,4 +47,4 @@
 - Have the all Diets page appear as images with names instead of a list.
 - Add Styling to be friendly to mobile devices.
 - Add UI for Workouts
-
+- Add API's for Diets and Workouts

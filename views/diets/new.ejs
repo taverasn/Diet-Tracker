@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <form action="/diets" method="post">
+            <div>
+                <input type="text" name="name">
+                <label>Diet Name</label>
+            </div>
+            <div>
+                <select name="dietType">
+                    <option value="Fasting">Fasting</option>
+                    <option value="Bulking">Bulking</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Low-Carb">Low-Carb</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                </select>
+                <label>Select Diet Type</label>
+            </div>
+            <div>
+                <input class="datepicker" type="text" name="startDate">
+                <label>Pick the Day you will Start</label>
+            </div>
+            <input type="submit" value="Add Diet">
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

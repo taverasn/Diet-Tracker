@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <main class="container">
+        <div class="container">
+            <h5><%= diet.name %> | Diet Type <%= diet.dietType %> | Start Date:
+                <%= diet.startDate.toLocaleDateString() %></h5>
+        </div>
+        <form class="container" action="/diets/<%= diet._id %>/meals" method="post">
+            <p>Log a new Day for your diet</p>
+            <div class="input-field">
+                <input type="text" name="meals">
+                <label>Enter Your Meals for the Day</label>
+            </div>
+            <div class="input-field">
+                <input class="datepicker" type="text" name="date">
+                <label>Day of Meals</label>
+            </div>
+            <input class="btn btn-small" type="submit" value="Add Meals">
+        </form>
+        <div class="container">
+
+            <% if(diet.meals.length) { %>
+            <h6>Meal Log</h6>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Meals</th>
+                        <th>Date</th>
+                        <th>Added by</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% diet.meals.forEach(function(meal) { %>
+                    <tr>
+                        <td><%= meal.meals %></td>
+                        <td><%= meal.date.toLocaleDateString() %></td>
+                        <td><%= meal.createdBy.displayName %></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <% } else { %>
+            <h6>No Meals Have Been Added for this Diet</h6>
+            <% } %>
+        </div>
+        <div class="container">
+
+            <% if(nutrients.length) { %>
+            <h6>Nutrient Intake:</h6>
+            <% nutrients.forEach(function(nutrient) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Intake</th>
+                        <th>Added By</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= nutrient.name %></td>
+                        <td><%= nutrient.intake %></td>
+                        <td><%= nutrient.createdBy.displayName %></td>
+                    </tr>
+                </tbody>
+            </table>
+                
+            <% }) %>
+            <% } else { %>
+            <h6>There Are No Nutrients For This Diet</h6>
+            <% } %>
+            <a class="btn btn-small" href="/diets/<%= diet._id %>/nutrients/new">Add A New Nutrient</a>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

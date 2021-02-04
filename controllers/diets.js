@@ -60,6 +60,7 @@ function deleteDiet(req, res) {
     Diet.findByIdAndDelete(req.params.id, function (err, diet) {
         console.log(diet);
     });
+    res.redirect('/diets')
 }
 
 function edit(req, res) {

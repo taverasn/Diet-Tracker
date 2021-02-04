@@ -5,17 +5,17 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <table class="striped">
+        <table class="table">
             <thead>
                 <tr>
-                    <th class="thead-small">Delete</th>
-                    <th class="thead-small">Edit</th>
-                    <th>Diet Name</th>
-                    <th>Diet Type</th>
+                    <th scope="col" class="thead-small">Delete</th>
+                    <th scope="col" class="thead-small">Edit</th>
+                    <th scope="col">Diet Name</th>
+                    <th scope="col">Diet Type</th>
                 </tr>
             </thead>
-            <% diets.forEach(function(diet) { %>
             <tbody>
+                <% diets.forEach(function(diet) { %>
                 <tr>
                     <td>
                         <form class="delete-form" action="/diets/<%= diet._id %>?_method=DELETE" method="POST">
@@ -34,9 +34,9 @@
                         <a><%= diet.dietType %></a>
                     </td>
                 </tr>
+                <% }) %>
             </tbody>
         </table>
-        <% }) %>
     </main>
     <%- include('../partials/footer') %>
 </body>

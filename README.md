@@ -25,7 +25,7 @@ Future Enhancements:
 - <img src="public/images/icons/node.jpeg" width="27"> Node.js
 - <img src="public/images/icons/express.png" width="27"> Express
 - <img src="public/images/icons/mongodb.jpg" width="27"> MongoDB
-- 🔐 OAuth
+- <img src="public/images/icons/oauth.jpeg" width="27"> OAuth
 
 ## Screenshots 📸
 

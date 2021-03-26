@@ -1,5 +1,5 @@
 # Diet Tracker
---
+---
 
 The application allows you to create a diet with a type which will be the plan that you follow. You will be able to also add a start date and update daily to keep track of your meals and nutrient intake.
 

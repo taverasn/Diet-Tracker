@@ -19,13 +19,13 @@ Future Enhancements:
 
 ## Technologies 💻
 - <img src="public/images/icons/html5.png" width="27"> HTML5
-- <img src="public/images/icons/css.png" width="27"> CSS3
+- <img src="public/images/icons/css.jpg" width="27"> CSS3
 - <img src="public/images/icons/javascript.png" width="27"> JavaScript
 - <img src="public/images/icons/jquery.png" width="27"> JQuery v3.5
 - <img src="public/images/icons/node.jpeg" width="27"> Node.js
 - <img src="public/images/icons/express.png" width="27"> Express
-- <img src="public/images/icons/mongodb.png" width="27"> MongoDB
-- <img src="public/images/icons/oauth.jpeg" width="27"> 🔐 OAuth
+- <img src="public/images/icons/mongodb.jpg" width="27"> MongoDB
+- 🔐 OAuth
 
 ## Screenshots 📸
 

@@ -5,9 +5,6 @@ The application allows you to create a diet with a type which will be the plan t
 
 ## Check it out @ [Diet Tracker](https://diet-tracker-application.herokuapp.com) 🌐
 
-Features:
-- 
-
 ---
 
 Future Enhancements:

@@ -3,7 +3,7 @@
 
 The application allows you to create a diet with a type which will be the plan that you follow. You will be able to also add a start date and update daily to keep track of your meals and nutrient intake.
 
-## Check it out @ [Diet Tracker](https://diet-tracker-application.herokuapp.com) 🌐
+## Check it out @ [Diet Tracker](https://diet-tracker-app-2751a4b3b119.herokuapp.com) 🌐
 
 ---
 
